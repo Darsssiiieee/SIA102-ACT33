@@ -1,0 +1,28 @@
+<body>
+<div class="header">
+	<h1>Activity 33: Angular Recipe Grid</h1>
+</div>
+<main class="container">
+	<div
+		class="card"
+		*ngFor="let recipe of recipes">
+		<img
+			[src]="recipe.imageUrl"
+			alt="" />
+		<h1>{{ recipe.name }}</h1>
+		<h2>{{ recipe.description }}</h2>
+
+		<button
+			class="btn btn--primary"
+			(click)="viewRecipe()">
+			View Recipe
+		</button>
+
+		<button
+			class="btn btn--secondary"
+			(click)="addToFavorite()">
+			Add to Favorites
+		</button>
+	</div>
+</main>
+</body>
